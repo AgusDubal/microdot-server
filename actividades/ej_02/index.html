@@ -15,20 +15,25 @@
 
         <nav>
             <ul>
-              <li>
+              <li onclick="toggleLed(1)">
                 home
                 <span></span><span></span><span></span><span></span>
               </li>
-              <li>
+              <li onclick="toggleLed(2)">
                 products
                 <span></span><span></span><span></span><span></span>
               </li>
-              <li>
+              <li onclick="toggleLed(3)">
                 services
                 <span></span><span></span><span></span><span></span>
               </li>
             </ul>
           </nav>
+        <script>
+            function toggleLed(id) {
+                fetch(`/toggle/${id}`);
+            }
+        </script>
 
     </main>
     <footer>
