@@ -24,7 +24,7 @@ async def index(request, dir, file):
 
 
 
-@app.route('/toggle/<int:id>') # Definimos la ruta con un parámetro entero
+@app.route('/toggle/led/<int:id>') # Definimos la ruta con un parámetro entero
 async def index(request, id):
 
     # Dependiendo del valor del parámetro id, encendemos o apagamos un LED
