@@ -20,6 +20,15 @@ async def index(request):
 async def index(request, dir, file):
     return send_file("/" + dir + "/" + file) # Cambiamos el nombre del archivo a enviar
 
+@app.route('/toggle/<int:id>') 
+async def index(request, id):
+    if id == 1:
+        LED1.value(not LED1.value())
+    elif id == 2:
+        LED2.value(not LED2.value())
+    elif id == 3:
+        LED3.value(not LED3.value())
+    return 'OK'
 
 # Corremos el servidor creado en el puerto 80
 app.run(port=80)
