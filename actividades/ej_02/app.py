@@ -16,18 +16,27 @@ async def index(request):
     return send_file('index.html')
 
 
+
+
 @app.route('/<dir>/<file>') # Definimos la ruta con dos parámetros
 async def index(request, dir, file):
     return send_file("/" + dir + "/" + file) # Cambiamos el nombre del archivo a enviar
 
-@app.route('/toggle/<int:id>') 
+
+
+@app.route('/toggle/<int:id>') # Definimos la ruta con un parámetro entero
 async def index(request, id):
+
+    # Dependiendo del valor del parámetro id, encendemos o apagamos un LED
     if id == 1:
         LED1.value(not LED1.value())
+
     elif id == 2:
         LED2.value(not LED2.value())
+
     elif id == 3:
         LED3.value(not LED3.value())
+
     return 'OK'
 
 # Corremos el servidor creado en el puerto 80

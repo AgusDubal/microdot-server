@@ -13,27 +13,20 @@
     </header>
     <main>
 
-        <nav>
-            <ul>
-              <li onclick="toggleLed(1)">
-                home
-                <span></span><span></span><span></span><span></span>
-              </li>
-              <li onclick="toggleLed(2)">
-                products
-                <span></span><span></span><span></span><span></span>
-              </li>
-              <li onclick="toggleLed(3)">
-                services
-                <span></span><span></span><span></span><span></span>
-              </li>
-            </ul>
-          </nav>
-        <script>
-            function toggleLed(id) {
-                fetch(`/toggle/${id}`);
-            }
-        </script>
+    <div id="outer">
+    <br /> <br /><br />
+    <div class="button_slide slide_left botones" onclick="toggleLed(1)">LED1</div>
+    <br /> <br /><br />
+    <div class="button_slide slide_left botones" onclick="toggleLed(2)">LED2</div>
+    <br /> <br /><br />
+    <div class="button_slide slide_left botones" onclick="toggleLed(3)">LED3</div>
+    </div>
+
+    <script>
+        function toggleLed(led) {
+            fetch(`/toggle/${led}`);
+        }
+    </script>
 
     </main>
     <footer>
