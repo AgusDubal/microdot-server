@@ -24,8 +24,59 @@
     box-shadow: inset 0 0 0 50px #176fc7;
     }
 
-#outer {
-    width: 364px;
-    margin: auto auto 0 auto;
-    text-align: center;
+  
+  .brian{
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/brian.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transition: all 0.5s;
   }
+
+  .sonrisa{
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/sonrisa.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transition: all 0.5s;
+  }
+
+
+  .sensei {
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/sensei.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute; /* Posiciona la imagen de manera absoluta */
+    top: 10px; /* Espacio desde la parte superior */
+    right: 10px; /* Espacio desde la parte derecha */
+    transition: all 0.5s;
+}
+
+.led-control-container {
+  display: flex; /* Usa Flexbox para organizar la imagen y los botones en una fila */
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  gap: 20px; /* Espacio entre la imagen y los botones */
+  margin: 20px auto; /* Centra el contenedor horizontalmente */
+  width: auto; /* Ajusta el ancho del contenedor al contenido */
+}
+
+.mega {
+  width: 240px;
+  height: 380px;
+  background-image: url(../images/mega.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-left: 0; /* Alinea la imagen a la izquierda */
+  transition: all 0.5s;
+}
+
+#outer {
+  text-align: center; /* Centra los botones dentro de su contenedor */
+  margin-left: 20px; /* Añade un margen izquierdo para separar los botones de la imagen */
+}
