@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 2</title>
+    <title>Actividad 3</title>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
@@ -25,24 +25,28 @@
             <div class="button_slide slide_left botones" onclick="toggleLed(3)">LED3</div>
         </div>
     </div>
+    <div class="temperatura-contenedor">
 
-    <!-- Mostrar temperatura-->
-    <div id="temperature-display"> 
-        Temperatura: <span id="temperature">0</span>°C
+        <!-- Mostrar temperatura-->
+        <div id="temperature-display"> 
+            Temperatura: <span id="temperature">0</span>°C
+        </div>
+
+        <!-- Slider para setear temperatura -->
+        <label for="temperature-slider">Setear temperatura:</label>
+        <input type="range" id="temperature-slider" name="temperature-slider" min="0" max="100" value="0" oninput="setTemperature(this.value)">
+        <span id="temperature-slider-value">0</span>°C
+
+        <!-- Estado del Buzzer -->
+
+        <div id="estado-buzzer">
+
+            Buzzer: <span id="buzzer-state">OFF</span>
+
+        </div>
+
     </div>
-
-    <!-- Slider para setear temperatura -->
-     <label for="temperature-slider">Setear temperatura:</label>
-     <input type="range" id="temperature-slider" name="temperature-slider" min="0" max="100" value="0" oninput="setTemperature(this.value)">
-     <span id="temperature-slider-value">0</span>°C
-
-    <!-- Estado del Buzzer -->
-
-    <div id="estado-buzzer">
-
-        Buzzer: <span id="buzzer-state">OFF</span>
-
-    </div>
+    
 
     <script>
         function toggleLed(led) {
