@@ -3,22 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad #</title>
+    <title>Actividad 2</title>
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/estilos.css">
 </head>
 <body>
     <header>
-        <h1>Actividad #</h1>
+        <h1>Actividad 3</h1>
     </header>
     <main>
+
+    <div class="led-control-container">
+
+        <!-- Contenedor de los botones -->
+        <div id="outer">
+            <br /><br /><br />
+            <div class="button_slide slide_left botones" onclick="toggleLed(1)">LED1</div>
+            <br /><br /><br />
+            <div class="button_slide slide_left botones" onclick="toggleLed(2)">LED2</div>
+            <br /><br /><br />
+            <div class="button_slide slide_left botones" onclick="toggleLed(3)">LED3</div>
+        </div>
+    </div>
+
+    <!-- Mostrar temperatura-->
+    <div id="temperature-display"> 
+        Temperatura: <span id="temperature">0</span>°C
+    </div>
+
+    <!-- Slider para setear temperatura -->
+     <label for="temperature-slider">Setear temperatura:</label>
+     <input type="range" id="temperature-slider" name="temperature-slider" min="0" max="100" value="0" oninput="setTemperature(this.value)">
+     <span id="temperature-slider-value">0</span>°C
+
+    <!-- Estado del Buzzer -->
+
+    <div id="estado-buzzer">
+
+        Buzzer: <span id="buzzer-state">OFF</span>
+
+    </div>
+
+    <script>
+        function toggleLed(led) {
+            fetch(`/toggle/led/${led}`);
+        }
+    </script>
+
+
+
     </main>
     <footer>
         <p>Representación Frontal y Visual de Datos</p>
         <p>Computadoras de Aeronaves</p>
-        <p>Alumno XX</p>
+        <p>Alumno Dubal Agustin</p>
         <p>Prof. Carlassara Fabrizio</p>
         <p id="fecha"></p>
+
     </footer>
     <script src="scripts/base.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
